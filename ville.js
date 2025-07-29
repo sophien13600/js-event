@@ -4,9 +4,9 @@ const button = document.querySelector('button')//selectionne le bouton
 //on surveille l'input
 input.addEventListener("input", ()=>{
     //des que l'evenement ce declenche on active le bouton
+    button.disabled = false;
     
 })
-
 
 // a la nouvelle saisie on verifie que la ville n'existe pas dans la liste 
 // si elle existe on n'active pas le bouton ajouter
@@ -27,4 +27,3 @@ button.addEventListener("click",(e)=>{
     
         //input.value.remove()
 })
-
