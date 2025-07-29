@@ -1,0 +1,10 @@
+div{
+    background-color: goldenrod;
+    height: 40vh;
+    padding: 50px;
+}
+div>div{
+    background-color: teal;
+    height:20vh;
+
+}

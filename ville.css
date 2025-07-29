@@ -1,0 +1,25 @@
+.container{
+    padding:2em;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.container-input{
+
+    width:25vw;
+}
+input{
+    width: 15vw;
+    padding: 0.5em;
+}
+button{
+    padding:0.5em
+}
+.container-select{
+    padding: 2em;
+}
+select {
+        width: 25vw;
+        padding: 0.5em;
+}
