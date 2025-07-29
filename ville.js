@@ -1,25 +1,30 @@
-//quand l'input est activer on recupere la ville et on active le bouton
-//on recupere l'input et on l'ajoute dans le select
-// on vide l'input pour la prochiane saisie et on desactive le bouton
+const  input =document.getElementById('input')// selectionne l'input
+const select = document.getElementById('select')// selectionne le select
+const button = document.querySelector('button')//selectionne le bouton
+//on surveille l'input
+input.addEventListener("input", ()=>{
+    //des que l'evenement ce declenche on active le bouton
+    
+})
+
+
 // a la nouvelle saisie on verifie que la ville n'existe pas dans la liste 
 // si elle existe on n'active pas le bouton ajouter
 // ajouter un boution supprimer et supprimer plusieur
 
-
-const  input =document.getElementById('input')
-const select = document.getElementById('select')
-const button = document.querySelector('button')
-const option = document.createElement('option')
-input.addEventListener('input',(event)=>{
-if(event){
-    button.removeAttribute('disabled')
-    return event.target.value
-    console.log(event.target.value);
-}
+button.addEventListener("click",(e)=>{
+    const option = document.createElement('option')// cree un element option
+    //on recupere la value dans l'input et on l'attribue à option   
+    option.innerHTML = input.value
+    //on cree un nouveau noeud au select avec l'option qu'on vient de creer
+    select.appendChild(option)
+    // on vide l'input pour la prochaine saisie et on desactive le bouton
+    input.value = '';
+    //et on desactive le bouton
+    button.disabled = true;
+    //console.log(document.querySelector('select'));
+    //console.log(document.getElementsByTagName('option'));
+    
+        //input.value.remove()
 })
 
-button.addEventListener('click',(event) =>{
-    option.innerHTML = input.value
-    select.appendChild(option)
-
-} )
