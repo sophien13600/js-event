@@ -12,7 +12,7 @@ input.addEventListener("input", ()=>{
 // si elle existe on n'active pas le bouton ajouter
 // ajouter un boution supprimer et supprimer plusieur
 
-button.addEventListener("click",(e)=>{
+button.addEventListener("click",()=>{
     const option = document.createElement('option')// cree un element option
     //on recupere la value dans l'input et on l'attribue à option   
     option.innerHTML = input.value
@@ -27,3 +27,49 @@ button.addEventListener("click",(e)=>{
     
         //input.value.remove()
 })
+
+
+/**
+ * 
+ *Correction 
+
+ let villes = []
+let villesSelect = document.querySelector('select')
+let ville = document.querySelector('#ville')
+let boutonAjouter = document.querySelector('.btn-dark')
+function ajouter() {
+    console.log(ville.value);
+
+    villes.push(ville.value.toUpperCase())
+    let option = document.createElement('option')
+    option.innerHTML = ville.value
+
+    villesSelect.appendChild(option)
+    ville.value = ""
+    boutonAjouter.disabled = true
+    ville.focus()
+}
+
+function verifierEtat() {
+    boutonAjouter.disabled = !ville.value || ville.value.trim().length == 0 || villes.includes(ville.value.trim().toUpperCase())
+}
+
+function supprimerPlusieurs() {
+    let options = villesSelect.options
+    for (let i = options.length - 1; i >= 0; i--) {
+        if (options[i].selected) {
+            villesSelect.remove(i)
+            villes.splice(i, 1)
+        }
+    }
+    // let selectedOptions = [...villesSelect.selectedOptions]
+    // console.log(villes);
+
+    // selectedOptions.forEach(opt => villes.splice(villes.indexOf(opt.value), 1))
+
+    // selectedOptions.forEach(opt => opt.remove())
+    // console.log(villes);
+
+}
+}
+  */
